@@ -4,7 +4,6 @@ import Favflower from '../components/Favflower'
 import '../index.css'
 
 
-
 const cardStyles = {
     padding: 25,
     "padding-bottom": 95, 
@@ -17,14 +16,10 @@ const cardStyles = {
     
 }
 
-
-
 const descriptionText= {
     "font-size": 10, 
+
 }
-
-
-
 
 class Flowercard extends Component {
     constructor(props) {
@@ -54,49 +49,29 @@ class Flowercard extends Component {
         /* must make state influence this 
         create a variable and an if statement , ... */
         return(
-            <div
-            
-            className = "cardstyle"
-
-            style= {cardStyles}
-            
-            >
-            <div>
-				<div
-                className ='titleText'
-                >{item.flowerName} 
-                <Favflower/>
-                </div> 
-                
-
-               {
-                !this.state.show &&
-                <img alt="flower card"
-                    style = {imgStyle}
-                    onClick ={this.toggleFlower}
-                    src={item.imgUrl} />
-               }
-
-              
-            </div>
-            {
-                this.state.show && 
-            <div 
-            className = 'descriptionText'
-            onClick ={this.toggleFlower}>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-                <div><strong>Scientific Name:  </strong>{item.scientificName} </div> 
-                <div><strong>Interesting Fact:   </strong>{item.interestingFact} </div>
-                <div><strong>Last Bloom:   </strong>{item.lastBloom} </div>
-                <div><strong>Location:   </strong>{item.location} </div>
-            </div>
-            }
+            <div className = "cardstyle" style= {cardStyles}>
+                <div>
+                    <div className ='titleText'>
+                        {item.flowerName} 
+                        <Favflower/>
+                    </div> 
+                {
+                    !this.state.show &&
+                    <img alt="flower card"
+                        style = {imgStyle}
+                        onClick ={this.toggleFlower}
+                        src={item.imgUrl} />
+                }
+                </div>
+                { this.state.show && 
+                <div className = 'descriptionText'
+                    onClick ={this.toggleFlower}>
+                    <div><strong>Scientific Name:  </strong>{item.scientificName} </div> 
+                    <div><strong>Interesting Fact:   </strong>{item.interestingFact} </div>
+                    <div><strong>Last Bloom:   </strong>{item.lastBloom} </div>
+                    <div><strong>Location:   </strong>{item.location} </div>
+                </div> }
            </div>
-        
-            
         )
     }
 }
