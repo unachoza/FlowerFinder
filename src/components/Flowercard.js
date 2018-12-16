@@ -66,11 +66,11 @@ class Flowercard extends Component {
                 { this.state.show && 
                 <div className = 'descriptionText'
                     onClick ={this.toggleFlower}>
-                    <div><strong>Scientific Name:  </strong>{item.scientificName} </div> 
-                    <div><strong>Interesting Fact:   </strong>{item.interestingFact} </div>
-                    <div><strong>Last Bloom:   </strong>{item.lastBloom} </div>
-                    <div><strong>Location:   </strong>{item.location} </div>
-                </div> }
+                    <strong>Scientific Name:  </strong>{item.scientificName} <br/>
+                    <strong>Interesting Fact:   </strong>{item.interestingFact} <br/>
+                    <strong>Last Bloom:   </strong>{item.lastBloom} <br/>
+                    <strong>Location:   </strong>{item.location} </div>
+                }
            </div>
         )
     }
