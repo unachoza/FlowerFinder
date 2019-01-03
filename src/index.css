@@ -110,3 +110,25 @@ h3 {
   text-align: center;
   font-family: 'Exo'
 }
+h6 {
+  font-size: 12px;
+  margin: 0;
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    body {
+      font-size: 12px;
+    }
+
+    .cardWrapper{
+      width: 90vw;
+    }
+    .titleText {
+      font-size: 18px;
+    }
+    
+}

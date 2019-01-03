@@ -6,13 +6,13 @@ import '../index.css'
 
 const cardStyles = {
     padding: 25,
-    "padding-bottom": 95, 
+    "paddingBottom": 95, 
     height: 210,
     width: 290,
     border: "solid black 3px",
     margin: 10,
-    "background-color": "lightpink",
-    'font-style': 'bold'
+    "backgroundColor": "lightpink",
+    'fontStyle': 'bold'
     
 }
 
@@ -53,7 +53,7 @@ class Flowercard extends Component {
                 <div>
                     <div className ='titleText'>
                         {item.flowerName} 
-                        <Favflower/>
+                        <Favflower item ={item} key={item.id} />
                     </div> 
                 {
                     !this.state.show &&
