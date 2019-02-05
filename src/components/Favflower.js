@@ -8,7 +8,7 @@ class Favflower extends Component {
 
     handleClick (){
         console.log('I was clicked')
-        // localStorage.setItem("fav", item.id)
+        localStorage.setItem("fav", item.id)
        
     }
     
